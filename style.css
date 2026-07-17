@@ -1,0 +1,174 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  color:white;
+  font-family:'Poppins', sans-serif;
+}
+
+/* INTRO */
+#intro{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:black;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  z-index:99999;
+}
+
+.intro-text{
+  opacity:0;
+  font-family:'Playfair Display';
+  font-size:24px;
+  margin:10px;
+  transition:2s;
+}
+
+.highlight{
+  color:gold;
+  font-size:32px;
+  text-shadow:0 0 20px gold;
+}
+
+#enterText{
+  margin-top:40px;
+  opacity:0;
+  animation:blink 1.5s infinite;
+}
+
+@keyframes blink{
+  0%{opacity:1;}
+  50%{opacity:0.3;}
+  100%{opacity:1;}
+}
+
+/* BACKGROUND */
+#bgVideo{
+  position:fixed;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:-2;
+  filter:brightness(0.25);
+}
+
+.overlay{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.7);
+  z-index:-1;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  text-align:center;
+}
+
+.hero h1{
+  font-family:'Great Vibes';
+  font-size:80px;
+  color:gold;
+  text-shadow:0 0 40px gold;
+}
+
+.hero h2{
+  font-family:'Playfair Display';
+}
+
+/* OPENING */
+.opening{
+  padding:100px 20px;
+  text-align:center;
+  line-height:2;
+}
+
+/* CINEMATIC */
+.cinematic{
+  height:100vh;
+  position:relative;
+}
+
+.scene{
+  position:absolute;
+  width:100%;
+  text-align:center;
+  opacity:0;
+  transform:scale(1.2);
+  transition:1.5s;
+}
+
+.scene.active{
+  opacity:1;
+  transform:scale(1);
+}
+
+.scene img{
+  width:260px;
+  border-radius:15px;
+  box-shadow:0 0 40px gold;
+}
+
+/* TEXT */
+.text-section{
+  padding:120px 20px;
+  text-align:center;
+}
+
+.text-section h2{
+  font-family:'Playfair Display';
+  margin-bottom:30px;
+}
+
+.text-section p{
+  max-width:700px;
+  margin:auto;
+  line-height:2;
+}
+
+/* VIDEO */
+.video-section{
+  padding:100px;
+  text-align:center;
+}
+
+.video-section video{
+  width:80%;
+  border-radius:15px;
+  box-shadow:0 0 50px gold;
+}
+
+/* END */
+.ending{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+#finalText{
+  opacity:0;
+  transition:3s;
+  font-size:26px;
+}
+
+/* FADE */
+#fade{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:black;
+  opacity:0;
+  transition:4s;
+}
